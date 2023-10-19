@@ -1,0 +1,20 @@
+{% extends "layout/base.html" %}
+
+
+{% block content %}
+{% for post in posts %}
+
+    
+    <div class="">
+        <div class="subject">
+            <p><a href="{% url 'by_subject' post.subject.pk %}">{{ post.subject.name }}</a></p>
+           <p>{{post.title}}</p>
+           <p>{{ post.content }}</p>
+           <p>сдать до {{post.deadline}}</p>
+        </div>
+
+            
+
+    </div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,20 @@
+.menu {
+    display: flex;
+}
+
+.left-column {
+    margin-top: 50px;
+    width: 300px;
+}
+
+
+
+.right-column {
+    width: 100%;
+}
+
+.subject-item { 
+    text-decoration: none;
+    color: #3c4043;
+    font-size: 14px;
+}

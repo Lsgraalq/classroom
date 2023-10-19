@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock title%} Classroom</title>
+    <link rel ="stylesheet" href="{% static 'classroom/style.css' %}">
+</head>
+<body>
+    <header>
+    <h1>Classroom</h1>
+    </header>
+    <nav class="">
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'add' %}">Добавить задание</a>
+    </nav>
+    <section class="menu">
+    <div class="left-column">
+    <div class="subject-list">
+    {% for subject in subjects %}
+    <a class="subject-item" href="{% url 'by_subject' subject.pk %}">{{ subject.name }}</a>
+    {% endfor %}
+    </div>
+    </div>
+    <div class="right-column">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+    </section>
+</body>
+</html>
