@@ -7,7 +7,7 @@
     
     <div class="">
         <div class="subject">
-            <p><a href="{% url 'by_subject' post.subject.pk %}">{{ post.subject.name }}</a></p>
+           <p><a href="{% url 'by_subject' post.subject.pk %}">{{ post.subject.name }}</a></p>
            <p>{{post.title}}</p>
            <p>{{ post.content }}</p>
            <p>сдать до {{post.deadline}}</p>

@@ -6,17 +6,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title%}{% endblock title%} Classroom</title>
+    <title >{% block title%}{% endblock title%} Classroom </title>
     <link rel ="stylesheet" href="{% static 'classroom/style.css' %}">
 </head>
 <body>
-    <header>
-    <h1>Classroom</h1>
-    </header>
-    <nav class="">
-        <a href="{% url 'index' %}">Главная</a>
-        <a href="{% url 'add' %}">Добавить задание</a>
+
+    <header class="header">
+
+    <nav class="navbar">
+        <a class="logo"href=" {% url 'index' %}">
+            <img class="logo-img" src="https://www.gstatic.com/classroom/logo_square_rounded.svg" alt="">
+            <span class="logo-text">Classroom >  {{ current_subject.name }}</span>
+        </a>
+        <a class="add-link"href="{% url 'add' %}">Добавить +</a>
     </nav>
+    <div class="header-line"></div>
+    </header >
+
     <section class="menu">
     <div class="left-column">
     <div class="subject-list">

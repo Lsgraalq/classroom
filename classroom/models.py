@@ -17,6 +17,7 @@ class BoardMessage(models.Model):
 class Subject(models.Model): 
     name = models.CharField(max_length=50, verbose_name="Название", db_index=True)
 
+
     def __str__(self) -> str:
         return self.name
 
